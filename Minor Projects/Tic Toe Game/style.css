@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #548678;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vmin;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
+    background-color: #fff;
+    transition: transform 0.2s, background-color 0.3s;
+}
+.box:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #e0e0e0;
+}
+
+#reset-btn, #new-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+#reset-btn:hover, #new-btn:hover {
+    background-color: #333333;
+}
+
+#msg {
+    color: #ffffc7;
+    font-size: 5vmin;
+}
+
+.msg-container {
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.hide {
+    display: none;
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .game {
+        height: 80vmin;
+        width: 80vmin;
+        gap: 1vmin;
+    }
+
+    .box {
+        height: 22vmin;
+        width: 22vmin;
+        font-size: 6vmin;
+    }
+
+    #msg {
+        font-size: 4vmin;
+    }
+
+    #reset-btn, #new-btn {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .game {
+        height: 90vmin;
+        width: 90vmin;
+        gap: 0.5vmin;
+    }
+
+    .box {
+        height: 26vmin;
+        width: 26vmin;
+        font-size: 5vmin;
+    }
+
+    #msg {
+        font-size: 3.5vmin;
+    }
+
+    #reset-btn, #new-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}
